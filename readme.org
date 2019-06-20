@@ -1,0 +1,20 @@
+* morelull
+
+[[file:static/morelull.png][睡睡菇]]
+
+面向普通IT技术人员的文档类排版。
+
+* 使用
+
+#+BEGIN_SRC latex
+% 直接使用morenull，它默认使用ctexart文档。
+\documentclass{moreull}
+
+\begin{document}
+你好啊。
+\end{document}
+#+END_SRC
+
+* 简介
+
+morenull仅定义普通外观以及一些命令和环境，不会更改其它宏包的默认设置。
