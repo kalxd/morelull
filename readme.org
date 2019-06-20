@@ -8,13 +8,18 @@
 
 #+BEGIN_SRC latex
 % 直接使用morenull，它默认使用ctexart文档。
-\documentclass{moreull}
+\documentclass{morelull}
 
 \begin{document}
 你好啊。
+
+\begin{lstlisting}{language=haskell}
+main :: IO ()
+main = getLine >>= putStrLn
+\end{lstlisting}
 \end{document}
 #+END_SRC
 
 * 简介
 
-morenull仅定义普通外观以及一些命令和环境，不会更改其它宏包的默认设置。
+morelull仅定义普通外观以及一些命令和环境，不会更改其它宏包的默认设置。
