@@ -16,6 +16,8 @@
 \RequirePackage[left=2cm, right=2cm, bottom=2cm]{geometry}
 % 更加现代定理、引用提示
 \RequirePackage{tcolorbox}
+% 书签
+\RequirePackage[open, openlevel=2, atend]{bookmark}
 \RequirePackage{xkeyval}
 
 %%% 自定义 %%%
@@ -35,15 +37,13 @@
 \setCJKsansfont{方正书宋_GBK}
 
 %%% 代码高亮设置 %%%
+\tcbuselibrary{listings}
+
 \lstset{
-  frame=single,
-  numbers=left,
   tabsize=4,
   breaklines=true,
-  captionpos=b,
   upquote=true,
   basicstyle=\footnotesize,
-  backgroundcolor=\color{MaterialGrey100},
   identifierstyle=\color{MaterialBlue800},
   commentstyle=\itshape\color{MaterialGreen700},
   stringstyle=\bfseries\color{MaterialAmber800},
@@ -92,13 +92,6 @@
 {\end{quote}}
 
 % 代码
-\newenvironment{ddma}[1][haskell]
-{
-  % \lstnewenvironment{mycode}{}{}
-  \begin{tcolorbox}
-      % \begin{mycode}
-}
-{
-  % \end{mycode}
-  \end{tcolorbox}
-}
+\newenvironment{ddma}
+{\begin{tcolorbox}}
+{\end{tcolorbox}}
