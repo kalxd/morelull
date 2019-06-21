@@ -40,10 +40,19 @@
 \tcbuselibrary{listings}
 
 \lstset{
+  frame=single,
+  frameround=tttt,
+  framesep=0.4,
+  framextopmargin=12pt,
+  framexbottommargin=12pt,
   tabsize=4,
   breaklines=true,
   upquote=true,
+  caption=\lstname,
+  captionpos=b,
   basicstyle=\footnotesize,
+  backgroundcolor=\color{MaterialBlue50},
+  rulecolor=\color{MaterialBlue},
   identifierstyle=\color{MaterialBlue800},
   commentstyle=\itshape\color{MaterialGreen700},
   stringstyle=\bfseries\color{MaterialAmber800},
@@ -51,7 +60,7 @@
   numberstyle=\bfseries\color{MaterialGrey800},
 }
 
-\lstdefinelanguage{js}{
+\lstdefinelanguage{javascript}{
   morekeywords={const, let, class, Promise, try, catch, Error, async, await},
   sensitive=true,
   morecomment=[l]{//},
@@ -60,6 +69,7 @@
   morestring=[b]",
   morestring=[b]`,
 }
+\lstalias{js}{javascript}
 
 %%% 页眉页脚设置 %%%
 \pagestyle{fancy}
@@ -90,8 +100,3 @@
 \newenvironment{yiys}
 {\begin{quote}\kaishu\small}
 {\end{quote}}
-
-% 代码
-\newenvironment{ddma}
-{\begin{tcolorbox}}
-{\end{tcolorbox}}
