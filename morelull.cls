@@ -13,9 +13,12 @@
 % 代码提示
 \RequirePackage{listings}
 % 版边边距
-\RequirePackage[left=2cm, right=2cm]{geometry}
+\RequirePackage[left=2cm, right=2cm, bottom=2cm]{geometry}
 % 更加现代定理、引用提示
 \RequirePackage{tcolorbox}
+
+%%% 自定义 %%%
+\colorlet{PrimaryColor}{MaterialBlue900}
 
 %
 % CTEX格式设置
@@ -62,10 +65,13 @@
 \setCJKmainfont{方正书宋_GBK}
 \setCJKsansfont{方正书宋_GBK}
 
-%
-% 眉首眉脚设置
-%
+%%% 页眉页脚设置 %%%
 \pagestyle{fancy}
+\fancyhead[L]{\textcolor{PrimaryColor}{\leftmark}}
+\fancyhead[C]{\textcolor{PrimaryColor}{\thepage}}
+\fancyhead[R]{\textcolor{PrimaryColor}{\rightmark}}
+\fancyfoot{}
+\renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth}
 
 %
 % 自定义命令
