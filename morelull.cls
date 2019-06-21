@@ -4,7 +4,7 @@
 
 \ProvidesClass{morelull}[2019/06/06 v0.0.1]
 
-\LoadClass{ctexart}
+\LoadClass[UTF8]{ctexart}
 
 % 眉首眉脚
 \RequirePackage{fancyhdr}
@@ -20,18 +20,19 @@
 %%% 自定义 %%%
 \colorlet{PrimaryColor}{MaterialBlue900}
 
-%
-% CTEX格式设置
-%
+%%% CTEX格式设置 %%
 \ctexset{
   today=big,
   contentsname={文章导航},
-  subsection/number={\textcolor{MaterialBlue900}{\thesubsection}}
+  subsection/number={\textcolor{MaterialBlue900}{\thesubsection}},
 }
 
-%
-% 代码高亮设置
-%
+%%% 字体设置 %%%
+\setmonofont{Fantasque Sans Mono}
+\setCJKmainfont{方正书宋_GBK}
+\setCJKsansfont{方正书宋_GBK}
+
+%%% 代码高亮设置 %%%
 \lstset{
   frame=single,
   numbers=left,
@@ -58,13 +59,6 @@
   morestring=[b]`,
 }
 
-%
-% 字体设置
-%
-\setmonofont{Fantasque Sans Mono}
-\setCJKmainfont{方正书宋_GBK}
-\setCJKsansfont{方正书宋_GBK}
-
 %%% 页眉页脚设置 %%%
 \pagestyle{fancy}
 \fancyhead[L]{\textcolor{PrimaryColor}{\leftmark}}
@@ -73,20 +67,19 @@
 \fancyfoot{}
 \renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth}
 
-%
-% 自定义命令
-%
-
+%%% 自定义命令 %%%
 % 专名号
 \providecommand\vlmk[1]{
-  \CJKunderline{#1}
+  \CJKunderline{\heiti{#1}}
 }
 
 % 着重号
 \providecommand\vovs[1]{
-  \CJKunderdot{#1}
+  \CJKunderdot{\heiti{#1}}
 }
 
-%
-% 自定义环境
-%
+%%% 自定义环境 %%%
+% 引用
+\newenvironment{yiys}
+{\begin{quote}\kaishu\small}
+{\end{quote}}
