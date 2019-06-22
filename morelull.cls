@@ -27,6 +27,7 @@
 \ctexset{
   today=big,
   contentsname={文章导航},
+  section/format=\Large\bfseries\centering\color{PrimaryColor},
   % section/number={\textcolor{MaterialBlue900}{\thesection}},
   subsection/number={\textcolor{MaterialBlue900}{\thesubsection}},
 }
