@@ -2,7 +2,7 @@
 % 个人自用文档样式
 %
 
-\ProvidesClass{morelull}[2019/06/06 v0.0.1]
+\ProvidesClass{morelull}[2019/06/06 v0.1.0]
 
 \LoadClass[UTF8]{ctexart}
 
@@ -18,6 +18,9 @@
 \RequirePackage{tcolorbox}
 % 书签
 \RequirePackage[open, openlevel=2, atend]{bookmark}
+% 链接
+\RequirePackage{hyperref}
+
 \RequirePackage{xkeyval}
 
 %%% 自定义 %%%
@@ -36,6 +39,14 @@
 \setmonofont{Fantasque Sans Mono}
 \setCJKmainfont{方正书宋_GBK}
 \setCJKsansfont{方正书宋_GBK}
+
+%%% 链接设置 %%%
+\hypersetup{
+  colorlinks=true,
+  linkcolor=MaterialPink,
+  urlcolor=MaterialBlue,
+  filecolor=MaterialGreen,
+}
 
 %%% 代码高亮设置 %%%
 \tcbuselibrary{listings}
