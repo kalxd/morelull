@@ -74,24 +74,24 @@
 %%% 页眉页脚设置 %%%
 \pagestyle{fancy}
 \fancyhead[L]{\textcolor{PrimaryColor}{\leftmark}}
-\fancyhead[C]{\textcolor{PrimaryColor}{\thepage}}
+\fancyhead[C]{\textcolor{PrimaryColor}{第 \thepage 页}}
 \fancyhead[R]{\textcolor{PrimaryColor}{\rightmark}}
 \fancyfoot{}
 \renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth}
 
 %%% 自定义命令 %%%
 % 专名号
-\providecommand\vlmk[1]{
-  \CJKunderline{\heiti{#1}}
+\providecommand\vlmk[1]{%
+  \CJKunderline{#1}%
 }
 
 % 着重号
-\providecommand\vovs[1]{
-  \CJKunderdot{\heiti{#1}}
+\providecommand\vovs[1]{%
+  \CJKunderdot{\heiti{#1}}%
 }
 
 % 内联代码，单一颜色
-\providecommand\code[1]{
+\providecommand\code[1]{%
   \ttfamily\textcolor{MaterialPink}{#1}
 }
 
