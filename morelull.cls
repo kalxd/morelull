@@ -42,9 +42,9 @@
 \lstset{
   frame=single,
   frameround=tttt,
-  framesep=0.4,
-  framextopmargin=12pt,
-  framexbottommargin=12pt,
+  framesep=1pt,
+  framextopmargin=6pt,
+  framexbottommargin=6pt,
   tabsize=4,
   breaklines=true,
   upquote=true,
@@ -61,7 +61,7 @@
 }
 
 \lstdefinelanguage{javascript}{
-  morekeywords={const, let, class, Promise, try, catch, Error, async, await},
+  morekeywords={const, let, class, Promise, try, catch, Error, async, await, super, constructor},
   sensitive=true,
   morecomment=[l]{//},
   morecomment=[s]{/*}{*/},
