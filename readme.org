@@ -2,12 +2,14 @@
 
 [[file:static/morelull.png][睡睡菇]]
 
-面向普通IT技术人员的文档类排版。
+面向民科（我自己）技术文档。
+
+关注中文排版。
 
 * 使用
 
 #+BEGIN_SRC latex
-% 直接使用morenull，它默认使用ctexart文档。
+% 跟使用ctexart没区别。
 \documentclass{morelull}
 
 \begin{document}
@@ -22,4 +24,4 @@ main = getLine >>= putStrLn
 
 * 简介
 
-morelull仅定义普通外观以及一些命令和环境，不会更改其它宏包的默认设置。
+**morelull**重新定义article默认样式，同时拓展一些命令。
