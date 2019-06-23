@@ -20,7 +20,6 @@
 \RequirePackage[open, openlevel=2, atend]{bookmark}
 % 链接
 \RequirePackage{hyperref}
-
 \RequirePackage{xkeyval}
 
 %%% 自定义 %%%
@@ -91,6 +90,11 @@
 \fancyfoot{}
 \renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth}
 
+%%% tcolorbox %%%
+\tcbuselibrary{theorems}
+\tcbuselibrary{skins}
+\tcbsetforeverylayer{enhanced}
+
 %%% 自定义命令 %%%
 % 专名号
 \providecommand\vlmk[1]{%
@@ -112,3 +116,47 @@
 \newenvironment{yiys}
 {\begin{quote}\kaishu\small}
 {\end{quote}}
+
+% 定理
+\newtcbtheorem[number within=section]{dkli}{定理}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  colback=MaterialGreen50,
+  colframe=MaterialGreen,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialGreen}
+}{}
+
+% 结论
+\newtcbtheorem[number within=section]{jply}{结论}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  colback=MaterialTeal50,
+  colframe=MaterialTeal,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialTeal}
+}{}
+
+% 命题
+\newtcbtheorem[number within=section]{mkti}{命题}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  colback=MaterialBlueGrey50,
+  colframe=MaterialBlueGrey,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialBlueGrey}
+}{}
+
+% 定义
+\newtcbtheorem[number within=section]{dkyi}{定义}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  colback=MaterialCyan50,
+  colframe=MaterialCyan,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialCyan}
+}{}
+
+% 提示
+
+% 注意
