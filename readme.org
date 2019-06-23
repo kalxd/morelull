@@ -24,4 +24,4 @@ main = getLine >>= putStrLn
 
 * 简介
 
-**morelull**重新定义article默认样式，同时拓展一些命令。
+**morelull** 重新定义article默认样式，同时拓展一些命令。

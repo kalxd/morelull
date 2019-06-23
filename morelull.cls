@@ -157,6 +157,35 @@
   boxed title style={colback=MaterialCyan}
 }{}
 
+% 内置提示框
+\newtcolorbox{tiuikl}[1]{
+  skin=empty,
+  top=0pt,
+  bottom=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  borderline west={2pt}{0pt}{#1},
+}
+
 % 提示
+\newenvironment{tiui}
+{\begin{tiuikl}{MaterialBlue}
+      \textcolor{MaterialBlue}{\heiti{提示：}}
+}
+{\end{tiuikl}}
+
+% 提醒
+\newenvironment{tixk}
+{\begin{tiuikl}{MaterialDeepOrange}
+      \textcolor{MaterialDeepOrange}{\heiti{提醒：}}
+}
+{\end{tiuikl}}
 
 % 注意
+\newenvironment{vuyi}
+{\begin{tiuikl}{MaterialRed}
+      \textcolor{MaterialRed}{\heiti{注意：}}
+}
+{\end{tiuikl}}
