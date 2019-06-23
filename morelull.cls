@@ -121,6 +121,7 @@
 \newtcbtheorem[number within=section]{dkli}{定理}{
   fonttitle=\heiti,
   boxrule=0.1mm,
+  before upper={\parindent2em},
   colback=MaterialGreen50,
   colframe=MaterialGreen,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
@@ -131,6 +132,7 @@
 \newtcbtheorem[number within=section]{jply}{结论}{
   fonttitle=\heiti,
   boxrule=0.1mm,
+  before upper={\parindent2em},
   colback=MaterialTeal50,
   colframe=MaterialTeal,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
@@ -141,6 +143,7 @@
 \newtcbtheorem[number within=section]{mkti}{命题}{
   fonttitle=\heiti,
   boxrule=0.1mm,
+  before upper={\parindent2em},
   colback=MaterialBlueGrey50,
   colframe=MaterialBlueGrey,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
@@ -152,6 +155,7 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   colback=MaterialCyan50,
+  before upper={\parindent2em},
   colframe=MaterialCyan,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
   boxed title style={colback=MaterialCyan}
