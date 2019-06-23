@@ -1,0 +1,91 @@
+%
+% 让老子来写一份完整的文档。
+%
+\documentclass{morelull}
+
+\title{论谁才是乖宝宝}
+\author{不愿透露姓名的王先生}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \vlmk{morelull}简单示例。
+\end{abstract}
+
+\tableofcontents
+
+\section{常用格式演示}
+
+以下列举了一些常用排版格式。
+
+\subsection{代码}
+
+代码直接套用\code{lstlisting}，仅在外观上稍作修改。
+
+\begin{lstlisting}[language=haskell]
+    -- 这里完全就是注释。
+    a :: Int
+    a = 1
+\end{lstlisting}
+
+同时添加javascript支持，支持缩写成\code{js}。
+
+\begin{lstlisting}[language=js]
+    const name = "Fuck you";
+
+    const name = 'Fuck you';
+    const name = `Fuck you`;
+
+    const inc = x => x + 1;
+
+    // compose :: (b -> c) -> (a -> b) -> a -> c
+    const compose = (f, g) => x => g(f(x));
+\end{lstlisting}
+
+\subsection{中文标点符号}
+
+\begin{itemize}
+\item{\vlmk{专名号}}
+\item{\vovs{着重号}}
+\end{itemize}
+
+\section{细小提示文本}
+
+\begin{yiys}
+    这里是\vovs{引用}。
+\end{yiys}
+
+\begin{tiui}
+    这里是\vovs{提示}。
+\end{tiui}
+
+\begin{tixk}
+    这里是\vovs{提醒}。
+\end{tixk}
+
+\begin{vuyi}
+    这里是\vovs{注意}。
+\end{vuyi}
+
+\section{阿庫西斯教义（选段）}
+
+\begin{dkli}{教义一}{}
+    阿庫西斯教徒努力就能做到，你們都是能幹的人，就算失敗了也不是你的錯，不能成功都是世界的錯。從不開心的事情中逃避即可，逃避不是失敗，有句話就叫「逃避就是勝利」。猶豫過久得出的答案，無論如何選擇都會後悔，反正都要後悔，就選擇當下的快樂吧。別太擔憂晚年如何，未來的你是否笑著，連神明都不知道，那就樂在當下吧。打到惡魔 討伐魔王！打到惡魔 討伐魔王！…
+\end{dkli}
+
+\begin{jply}{教义二}{}
+    汝，迷茫的家裡蹲啊。不要太過自責……不想努力是世間的錯，本性惡劣是環境的錯，長得醜是遺傳基因的錯。不要責備自己，將責任推卸給他人便好……
+\end{jply}
+
+\begin{mkti}{教义三}{}
+    汝，虔誠的教徒啊。為了不再受到惡魔所誘惑，記住這句咒語吧。「厄里斯的胸部是墊出來的」。今後若是你的心又受到誘惑，就記得詠唱這句咒語。若是遇見其他受到誘惑的人，告訴他們這句咒語也是好事一樁。
+\end{mkti}
+
+\begin{dkyi}{教义四}{}
+    反正都要失敗不如放手去做，失敗之後跑路就好了
+\end{dkyi}
+
+\end{document}
