@@ -64,19 +64,25 @@ main = getLine >>= putStrLn
 ### 提示
 
 ```latex
-\tiui{提示}
+\begin{tiui}
+	提示
+\end{tiui}
 ```
 
 ### 提醒
 
 ```latex
-\tixk{提醒}
+\begin{tixk}
+	提醒
+\end{tixk}
 ```
 
 ### 注意
 
 ```latex
-\vuyi{注意}
+\begin{vuyi}
+	注意
+\end{vuyi}
 ```
 
 ## 数学环境
