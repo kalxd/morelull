@@ -92,7 +92,7 @@
   morekeywords=[1]{const, let, mut, fn, unsafe, while, loop, if, else, \?, return, await, async},
   morekeywords=[1]{as, dyn, Trait, impl, static, for},
   morekeywords=[1]{break, continue, label},
-  morekeywords=[2]{trait, type, struct, newtype, enum},
+  morekeywords=[2]{trait, type, struct, newtype, enum, Self, self},
   morekeywords=[3]{Vec, String, str, Box, Cell, Arc, Send, Sync, Error, Option, Result},
   morekeywords=[4]{mod, use, crate, pub},
   morekeywords=[5]{println!, dbg!, format!, panic!},
@@ -119,17 +119,17 @@
 
 %%% 自定义命令 %%%
 % 专名号
-\providecommand\vrmk[1]{%
+\providecommand\专名[1]{%
   \CJKunderline{#1}%
 }
 
 % 着重号
-\providecommand\vovs[1]{%
+\providecommand\着重[1]{%
   \CJKunderdot{\heiti{#1}}%
 }
 
 % 内联代码，单一颜色
-\providecommand\code[1]{%
+\providecommand\代码[1]{%
   \ttfamily\textcolor{MaterialPink}{#1}
 }
 
