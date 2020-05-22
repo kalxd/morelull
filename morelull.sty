@@ -20,6 +20,7 @@
 \RequirePackage{hyperref}
 
 %%% 自定义 %%%
+% 主色调
 \colorlet{PrimaryColor}{MaterialBlue900}
 
 %%% CTEX格式设置 %%
@@ -27,7 +28,7 @@
   today=big,
   contentsname={文章导航},
   section/format=\Large\bfseries\centering\color{PrimaryColor},
-  subsection/number={\textcolor{MaterialBlue900}{\thesubsection}},
+  subsection/number={\textcolor{PrimaryColor}{\thesubsection}},
 }
 
 %%% 链接设置 %%%
@@ -55,14 +56,28 @@
   backgroundcolor=\color{MaterialBlue50},
   rulecolor=\color{MaterialBlue},
   identifierstyle=\color{MaterialBlue800},
-  commentstyle=\itshape\color{MaterialGreen700},
+  commentstyle=\itshape\color{MaterialGrey600},
   stringstyle=\bfseries\color{MaterialAmber800},
-  keywordstyle=\bfseries\color{MaterialPurple700},
+  % 保留关键字
+  keywordstyle=[1]\bfseries\color{MaterialPurple700},
+  % 新类、新类型、新接口定义
+  keywordstyle=[2]\bfseries\color{MaterialTeal800},
+  % 原始类型
+  keywordstyle=[3]\bfseries\color{MaterialPink400},
+  % 模块
+  keywordstyle=[4]\bfseries\color{MaterialBlue900},
+  % 其他
+  keywordstyle=[5]\color{MaterialRed500},
   numberstyle=\bfseries\color{MaterialGrey800},
 }
 
+% javascript语法定义
 \lstdefinelanguage{javascript}{
-  morekeywords={const, let, class, Promise, try, catch, Error, async, await, super, constructor},
+  morekeywords=[1]{const, let, function, if, else, while, do, return, break, async, await, yield},
+  morekeywords=[2]{class, extends, super, constructor, static, this, new, get, set},
+  morekeywords=[3]{Array, Object, Number, NaN, null, undefined, Set, Buffer},
+  morekeywords=[4]{module, exports, require},
+  otherkeywords={=>},
   sensitive=true,
   morecomment=[l]{//},
   morecomment=[s]{/*}{*/},
@@ -71,6 +86,23 @@
   morestring=[b]`,
 }
 \lstalias{js}{javascript}
+
+% rust语法定义
+\lstdefinelanguage{rust}{
+  morekeywords=[1]{const, let, mut, fn, unsafe, while, loop, if, else, \?, return, await, async},
+  morekeywords=[1]{as, dyn, Trait, impl, static, for},
+  morekeywords=[1]{break, continue, label},
+  morekeywords=[2]{trait, type, struct, newtype, enum},
+  morekeywords=[3]{Vec, String, str, Box, Cell, Arc, Send, Sync, Error, Option, Result},
+  morekeywords=[4]{mod, use, crate, pub},
+  morekeywords=[5]{println!, dbg!, format!, panic!},
+  otherkeywords={::},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[bd]",
+}
+\lstalias{rs}{rust}
 
 %%% 页眉页脚设置 %%%
 \pagestyle{fancy}
