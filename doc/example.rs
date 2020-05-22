@@ -10,12 +10,13 @@ trait Machine {
     fn gen_block() -> Block {
         let matchine = Self::new();
         let energe = matchine.run();
-        Block::from_energe(&energe);
+        Block::from_energe(&energe)
     }
 }
 
 const ID: &'static str = "ID";
 
+#[derive(Clone, Debug)]
 pub struct MyMachine<'a> {
 	id: &'a str
 }
