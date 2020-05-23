@@ -135,9 +135,14 @@
 
 %%% 自定义环境 %%%
 % 引用
-\newenvironment{ybys}
+\newenvironment{引用}
 {\begin{quote}\kaishu\small}
 {\end{quote}}
+
+\tcolorboxenvironment{引用}{
+  blanker,
+  borderline west={1mm}{0pt}{MaterialGrey200}
+}
 
 % 定理
 \newtcbtheorem[number within=section]{定理}{定理}{
