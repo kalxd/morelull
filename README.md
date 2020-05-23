@@ -10,6 +10,8 @@
 
 *morelull*重新定义`ctexart`默认样式，同时拓展一些命令。
 
+更多信息请查看[文档](./doc/doc.tex)或[模板](./doc/doc.tex)。
+
 # 使用
 
 ```latex
@@ -38,7 +40,3 @@ main = getLine >>= putStrLn
 ```
 
 功能与文档用法大同小异，移除了一些默认配置，可以在其它电脑上安装使用。
-
-# 示例
-
-查看sample.pdf及sample.tex。

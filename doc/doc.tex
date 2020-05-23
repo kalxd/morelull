@@ -9,8 +9,28 @@
 \maketitle
 \tableofcontents
 
-\section{小特色}
-待续。
+\section{小小的特色}
+向面民科（我自己）的latex模板，不仅能输出中文，连环境、命令都用中文，这样更有民科的感觉。
+我不会latex的缘故，该模板尽量不提供各种选项开关，所有环境、命令只有一种用法、外观。
+
+我并不要求模板能满足我的所有需求，它更像是中间产品，在此基础上再改造、再升级，满足最终要求。“再改造”与“不提供选项开关”不矛盾：该模板不会更改默认环境、命令，它只是更改\代码{ctexart}外观，如果对目前改动不满意，可以重新定义旧环境、命令；“开关”往往只能更改一小部分，面对大改动需求，这种设计往往很无力。
+
+\section{pandoc支持}
+
+该模板同样能被pandoc使用。\代码{pandoc markdown}提供了很多元信息，可以按照以下方式书写：
+
+\begin{lstlisting}
+    ---
+    title: 这里是标题
+    toc: true
+    indent: true
+    documentclass: morelull
+    author: 这里写上作者姓名
+    date: \date
+    ---
+\end{lstlisting}
+
+完成后调用\代码{pandoc --pdf-engine xelatex file.md -o output.pdf}，需要明确指定latex引擎。
 
 \section{中文标点符号}
 
@@ -54,6 +74,14 @@
 \section{数学环境}
 对于我这个民科而言，倒像是多余的。
 
+每个环境都提供锚点的前缀，该前缀与该环境名称相同。
+例如\nameref{命题:递增}环境，第一个参数是标题（命题名称），后一个参数就是锚点名称，假如这个锚点叫“递增”，那么整个锚点名称就叫“命题:递增”，
+同理，定理环境的前缀为“定理”……
+
+\begin{注意}
+    “命题:递增”的冒号（:）是英名标点。
+\end{注意}
+
 \begin{定理}{三角形相似}{三角形相似}
     如果一个三角形的两个角与另一个三角形的两个角对应相等，那么这两个三角形相似．简述为：两角对应相等，两三角形相似。
 
@@ -83,7 +111,7 @@
 \end{定义}
 
 \section{扩展计算机语言高亮}
-listings支持语法并不广泛，为了满足更多需求，我定义新的两种语法。
+只定义javascript和rust两种高亮，而且并不完善：我只用js的es6之后的语法，\代码{var}等不再推荐使用的语法不再支持；rs标准库内容过多，只定义了常用几种。
 
 \subsection{javascript（js）语法高亮}
 \lstinputlisting[language=js]{./example.js}
