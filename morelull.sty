@@ -23,7 +23,7 @@
 % 主色调
 \colorlet{PrimaryColor}{MaterialBlue900}
 
-%%% CTEX格式设置 %%
+%%% CTEX格式设置 %%%
 \ctexset{
   today=big,
   contentsname={文章导航},
@@ -183,8 +183,8 @@
   boxed title style={colback=MaterialCyan}
 }{}
 
-% 内置提示框
-\newtcolorbox{tiuikl}[1]{
+% 文本提示框
+\newtcolorbox{文本提示框}[1]{
   skin=empty,
   top=0pt,
   bottom=0pt,
@@ -196,22 +196,22 @@
 }
 
 % 提示
-\newenvironment{tiui}
-{\begin{tiuikl}{MaterialBlue}
+\newenvironment{提示}
+{\begin{文本提示框}{MaterialBlue}
       \textcolor{MaterialBlue}{\heiti{提示：}}
 }
-{\end{tiuikl}}
+{\end{文本提示框}}
 
 % 提醒
-\newenvironment{tixk}
-{\begin{tiuikl}{MaterialDeepOrange}
+\newenvironment{提醒}
+{\begin{文本提示框}{MaterialDeepOrange}
       \textcolor{MaterialDeepOrange}{\heiti{提醒：}}
 }
-{\end{tiuikl}}
+{\end{文本提示框}}
 
 % 注意
-\newenvironment{vuyi}
-{\begin{tiuikl}{MaterialRed}
+\newenvironment{注意}
+{\begin{文本提示框}{MaterialRed}
       \textcolor{MaterialRed}{\heiti{注意：}}
 }
-{\end{tiuikl}}
+{\end{文本提示框}}
