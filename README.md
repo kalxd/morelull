@@ -10,11 +10,23 @@
 
 *morelull*重新定义`ctexart`默认样式，同时拓展一些命令。
 
+# 依赖
+
+需要使用`xelatex`编译，同时依赖下面这些包：
+
+* fancyhdr，眉首眉脚。
+* xcolor-material，主要调色板。
+* listings，代码高亮
+* geometry，版边边距。
+* tcolorbox，醒目提示。
+* bookmark，书签功能。
+* hyperref，超链接。
+
 # 说明文档
 
 可查看兼具使用说明和代码说明的[文档源码](./doc/doc.tex)。
 
-或者在overleaf上在线预览模板。
+或者在overleaf上[在线预览模板](https://www.overleaf.com/latex/templates/morelull-sample/sfrmdxnrnbbn)。
 
 # 使用
 
