@@ -9,9 +9,9 @@
 \usepackage{morelull}
 
 %%% 字体设置 %%%
-\setmonofont{Fantasque Sans Mono}
-\setCJKmainfont{方正书宋_GBK}
-\setCJKsansfont{方正书宋_GBK}
+\setmonofont{Fira Code Retina}
+\setCJKmainfont{方正聚珍新仿简繁}
+\setCJKsansfont{方正聚珍新仿简繁}
 \setCJKfamilyfont{方正楷体}{方正楷体简体}
 
 % 重新定义
