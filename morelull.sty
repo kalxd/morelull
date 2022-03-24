@@ -19,16 +19,18 @@
 % 链接
 \RequirePackage{hyperref}
 
-%%% 自定义 %%%
+%%% 颜色定义 %%%
 % 主色调
 \colorlet{PrimaryColor}{MaterialBlue900}
+
+\providecolor{靛蓝}{HTML}{065279}
 
 %%% CTEX格式设置 %%%
 \ctexset{
   today=big,
   contentsname={文章导航},
-  section/format=\Large\bfseries\centering\color{PrimaryColor},
-  subsection/number={\textcolor{PrimaryColor}{\thesubsection}},
+  section/format=\Large\bfseries\centering\color{靛蓝},
+  subsection/number={\textcolor{靛蓝}{\thesubsection}},
 }
 
 %%% 链接设置 %%%
@@ -120,7 +122,7 @@
 %%% 自定义命令 %%%
 % 专名号
 \providecommand\专名[1]{%
-  \CJKunderline{#1}%
+  \underline{#1}%
 }
 
 % 着重号
