@@ -2,7 +2,7 @@
 % 个人自用文档样式
 %
 
-\ProvidesClass{morelull}[2020/05/24 v0.2.0]
+\ProvidesClass{morelull}[2022/04/25 v0.3.0]
 
 \LoadClass[UTF8]{ctexart}
 
@@ -12,7 +12,7 @@
 \setmonofont{Fira Code Retina}
 \setCJKmainfont{方正聚珍新仿简繁}
 \setCJKsansfont{方正聚珍新仿简繁}
-\setCJKfamilyfont{方正楷体}{方正楷体简体}
+\setCJKfamilyfont{zhhei}{方正黑体简体}
 
 % 重新定义
 \renewenvironment{引用}

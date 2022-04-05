@@ -73,12 +73,12 @@
   numberstyle=\bfseries\color{MaterialGrey800},
 }
 
-% javascript语法定义
-\lstdefinelanguage{javascript}{
+% typescript语法定义
+\lstdefinelanguage{typescript}{
   morekeywords=[1]{const, let, function, if, else, while, do, return, break, async, await, yield},
-  morekeywords=[2]{class, extends, super, constructor, static, this, new, get, set},
+  morekeywords=[2]{class, interface, extends, type, this, new},
   morekeywords=[3]{Array, Object, Number, NaN, null, undefined, Set, Buffer},
-  morekeywords=[4]{module, exports, require},
+  morekeywords=[4]{module, exports, require, import, from},
   otherkeywords={=>},
   sensitive=true,
   morecomment=[l]{//},
@@ -87,7 +87,7 @@
   morestring=[b]",
   morestring=[b]`,
 }
-\lstalias{js}{javascript}
+\lstalias{ts}{typescript}
 
 % rust语法定义
 \lstdefinelanguage{rust}{
@@ -108,9 +108,9 @@
 
 %%% 页眉页脚设置 %%%
 \pagestyle{fancy}
-\fancyhead[L]{\textcolor{PrimaryColor}{\leftmark}}
-\fancyhead[C]{\textcolor{PrimaryColor}{第\zhnumber{\thepage}页}}
-\fancyhead[R]{\textcolor{PrimaryColor}{\rightmark}}
+\fancyhead[L]{\textcolor{靛蓝}{\leftmark}}
+\fancyhead[C]{\textcolor{靛蓝}{第\zhnumber{\thepage}页}}
+\fancyhead[R]{\textcolor{靛蓝}{\rightmark}}
 \fancyfoot{}
 \renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth}
 
