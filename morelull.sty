@@ -26,7 +26,24 @@
 % 主色调
 \colorlet{PrimaryColor}{MaterialBlue900}
 
+% 蓝
+\providecolor{水蓝}{HTML}{d2f0f4}
 \providecolor{靛蓝}{HTML}{065279}
+% 红
+\providecolor{桃红}{HTML}{f47983}
+\providecolor{品红}{HTML}{f00056}
+\providecolor{丹}{HTML}{ff4e20}
+% 绿
+\providecolor{绿沈}{HTML}{0c8918}
+\providecolor{青碧}{HTML}{48c0a3}
+% 黑
+\providecolor{漆黑}{HTML}{161823}
+\providecolor{墨色}{HTML}{50616d}
+% 白
+\providecolor{莹白}{HTML}{e3f9fd}
+\providecolor{雪白}{HTML}{f2fdff}
+\providecolor{月白}{HTML}{d6ecf0}
+\providecolor{花白}{HTML}{c2ccd0}
 
 %%% CTEX格式设置 %%%
 \ctexset{
@@ -48,7 +65,7 @@
 \tcbuselibrary{listings}
 
 \lstset{
-  frame=single,
+  frame=shadowbox,
   frameround=tttt,
   framesep=1pt,
   framextopmargin=6pt,
@@ -58,29 +75,29 @@
   upquote=true,
   captionpos=b,
   basicstyle=\footnotesize,
-  backgroundcolor=\color{MaterialBlue50},
-  rulecolor=\color{MaterialBlue},
-  identifierstyle=\color{MaterialBlue800},
-  commentstyle=\itshape\color{MaterialGrey600},
-  stringstyle=\bfseries\color{MaterialAmber800},
+  backgroundcolor=\color{雪白},
+  rulecolor=\color{水蓝},
+  identifierstyle=\color{漆黑},
+  commentstyle=\itshape\color{墨色},
+  stringstyle=\bfseries\color{青碧},
   % 保留关键字
-  keywordstyle=[1]\bfseries\color{MaterialPurple700},
+  keywordstyle=[1]\bfseries\color{靛蓝},
   % 新类、新类型、新接口定义
-  keywordstyle=[2]\bfseries\color{MaterialTeal800},
+  keywordstyle=[2]\bfseries\color{绿沈},
   % 原始类型
-  keywordstyle=[3]\bfseries\color{MaterialPink400},
+  keywordstyle=[3]\bfseries\color{品红},
   % 模块
-  keywordstyle=[4]\bfseries\color{MaterialBlue900},
+  keywordstyle=[4]\bfseries\color{靛蓝},
   % 其他
-  keywordstyle=[5]\color{MaterialRed500},
-  numberstyle=\bfseries\color{MaterialGrey800},
+  keywordstyle=[5]\color{桃红},
+  numberstyle=\bfseries\color{漆黑},
 }
 
 % typescript语法定义
 \lstdefinelanguage{typescript}{
   morekeywords=[1]{const, let, function, if, else, while, do, return, break, async, await, yield},
   morekeywords=[2]{class, interface, extends, type, this, new},
-  morekeywords=[3]{Array, Object, Number, NaN, null, undefined, Set, Buffer},
+  morekeywords=[3]{Array, Object, Number, NaN, null, undefined, Set, Buffer, string, number, object},
   morekeywords=[4]{module, exports, require, import, from},
   otherkeywords={=>},
   sensitive=true,
@@ -221,7 +238,7 @@
 
 % 注意
 \newenvironment{注意}
-{\begin{文本提示框}{MaterialRed}
-      \textcolor{MaterialRed}{\heiti{注意：}}
+{\begin{文本提示框}{丹}
+      \textcolor{丹}{\heiti{注意：}}
 }
 {\end{文本提示框}}
