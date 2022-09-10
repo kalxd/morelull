@@ -1,6 +1,6 @@
 # morelull
 
-![睡睡菇](./static/morelull.png)
+![睡睡菇](https://media.52poke.com/wiki/thumb/c/c9/755Morelull.png/240px-755Morelull.png)
 
 面向民科（我自己）技术文档。
 
@@ -10,17 +10,42 @@
 
 *morelull*重新定义`ctexart`默认样式，同时拓展一些命令。
 
+整体主题色彩依据[中国色彩](https://github.com/kalxd/happiny)。
+
 # 依赖
 
 需要使用`xelatex`编译，同时依赖下面这些包：
 
 * fancyhdr，眉首眉脚。
-* xcolor-material，主要调色板。
+* xcolor，重新定义调色板。
 * listings，代码高亮
 * geometry，版边边距。
 * tcolorbox，醒目提示。
 * bookmark，书签功能。
 * hyperref，超链接。
+
+# 安装
+
+这个包并未上传到ctan，只能本地安装。确保依赖包满足的情况下，执行以下命令：
+
+1. 在家目录创建必要目录：
+
+```bash
+$ mkdir -p ~/texmf/tex/latex/
+```
+
+2. 复制源代码：
+
+```
+$ git clone https://github.com/kalxd/morelull.git ~/texmf/tex/latex/morelull
+```
+3. 重载包信息：
+
+```bash
+$ texhash ~/texmf
+```
+
+这几步下来，不出意外的话，应该就能使用上了。
 
 # 说明文档
 
