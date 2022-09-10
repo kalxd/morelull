@@ -2,15 +2,13 @@
 % 个人自用文档样式
 %
 
-\ProvidesPackage{morelull}[2020/05/23 v0.2.0]
+\ProvidesPackage{morelull}[2020/09/04 v0.3.0]
 
 % 中文标点符号
 \RequirePackage{xeCJKfntef}
 
 % 眉首眉脚
 \RequirePackage{fancyhdr}
-% 调色板
-\RequirePackage{xcolor-material}
 % 代码提示
 \RequirePackage{listings}
 % 版边边距
@@ -23,12 +21,11 @@
 \RequirePackage{hyperref}
 
 %%% 颜色定义 %%%
-% 主色调
-\colorlet{PrimaryColor}{MaterialBlue900}
-
-% 蓝
+% 水
 \providecolor{水蓝}{HTML}{d2f0f4}
+% 蓝
 \providecolor{靛蓝}{HTML}{065279}
+\providecolor{靛青}{HTML}{177cb0}
 % 红
 \providecolor{桃红}{HTML}{f47983}
 \providecolor{品红}{HTML}{f00056}
@@ -36,6 +33,16 @@
 % 绿
 \providecolor{绿沈}{HTML}{0c8918}
 \providecolor{青碧}{HTML}{48c0a3}
+\providecolor{缥}{HTML}{7fecad}
+\providecolor{艾绿}{HTML}{a4e2c6}
+\providecolor{嫩绿}{HTML}{bddd22}
+\providecolor{青白}{HTML}{c0ebd7}
+% 黄
+\providecolor{姜黄}{HTML}{ffc773}
+\providecolor{橙色}{HTML}{fa8c35}
+% 灰
+\providecolor{苍白}{HTML}{d1d9e0}
+\providecolor{苍青}{HTML}{7397ab}
 % 黑
 \providecolor{漆黑}{HTML}{161823}
 \providecolor{墨色}{HTML}{50616d}
@@ -44,6 +51,7 @@
 \providecolor{雪白}{HTML}{f2fdff}
 \providecolor{月白}{HTML}{d6ecf0}
 \providecolor{花白}{HTML}{c2ccd0}
+\providecolor{灰白}{HTML}{f0f0f4}
 
 %%% CTEX格式设置 %%%
 \ctexset{
@@ -132,7 +140,7 @@
 \fancyhead[C]{\textcolor{靛蓝}{第\zhnumber{\thepage}页}}
 \fancyhead[R]{\textcolor{靛蓝}{\rightmark}}
 \fancyfoot{}
-\renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth}
+\renewcommand{\headrule}{\color{靛蓝}\hrule width\textwidth}
 
 %%% tcolorbox %%%
 \tcbuselibrary{theorems}
@@ -152,7 +160,7 @@
 
 % 内联代码，单一颜色
 \providecommand\代码[1]{%
-  {\ \ttfamily{\textcolor{MaterialPink}{#1}}}
+  {\ \ttfamily{\textcolor{桃红}{#1}}}
 }
 
 %%% 自定义环境 %%%
@@ -163,7 +171,7 @@
 
 \tcolorboxenvironment{引用}{
   blanker,
-  borderline west={1mm}{0pt}{MaterialGrey200}
+  borderline west={1mm}{0pt}{花白}
 }
 
 % 定理
@@ -171,10 +179,10 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=MaterialGreen50,
-  colframe=MaterialGreen,
+  colback=青白,
+  colframe=青碧,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=MaterialGreen}
+  boxed title style={colback=青碧}
 }{定理}
 
 % 结论
@@ -182,10 +190,10 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=MaterialTeal50,
-  colframe=MaterialTeal,
+  colback=姜黄,
+  colframe=橙色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=MaterialTeal}
+  boxed title style={colback=橙色}
 }{结论}
 
 % 命题
@@ -193,21 +201,21 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=MaterialBlueGrey50,
-  colframe=MaterialBlueGrey,
+  colback=灰白,
+  colframe=苍青,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=MaterialBlueGrey}
+  boxed title style={colback=苍青}
 }{命题}
 
 % 定义
 \newtcbtheorem[number within=section]{定义}{定义}{
   fonttitle=\heiti,
   boxrule=0.1mm,
-  colback=MaterialCyan50,
+  colback=雪白,
   before upper={\parindent2em},
-  colframe=MaterialCyan,
+  colframe=靛青,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=MaterialCyan}
+  boxed title style={colback=靛青}
 }{定义}
 
 % 文本提示框
@@ -225,20 +233,20 @@
 % 提示
 \newenvironment{提示}
 {\begin{文本提示框}{MaterialBlue}
-      \textcolor{MaterialBlue}{\heiti{提示：}}
+    \textcolor{MaterialBlue}{\heiti{提示：}}
 }
 {\end{文本提示框}}
 
 % 提醒
 \newenvironment{提醒}
 {\begin{文本提示框}{MaterialDeepOrange}
-      \textcolor{MaterialDeepOrange}{\heiti{提醒：}}
+    \textcolor{MaterialDeepOrange}{\heiti{提醒：}}
 }
 {\end{文本提示框}}
 
 % 注意
 \newenvironment{注意}
 {\begin{文本提示框}{丹}
-      \textcolor{丹}{\heiti{注意：}}
+    \textcolor{丹}{\heiti{注意：}}
 }
 {\end{文本提示框}}
