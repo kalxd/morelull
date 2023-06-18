@@ -2,14 +2,14 @@
 % 个人自用文档样式
 %
 
-\ProvidesPackage{morelull}[2020/09/10 v0.3.0]
+\ProvidesPackage{morelull}[2023/06/18 v0.4.0]
 
 % 中文标点符号
 \RequirePackage{xeCJKfntef}
 % 眉首眉脚
 \RequirePackage{fancyhdr}
 % 颜色支持
-\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[table, dvipsnames]{xcolor}
 % 代码提示
 \RequirePackage{listings}
 % 版边边距
@@ -161,7 +161,7 @@
 
 % 内联代码，单一颜色
 \providecommand\代码[1]{%
-  {\ \ttfamily{\textcolor{桃红}{#1}}}
+  {\ttfamily{\textcolor{桃红}{#1}}}%
 }
 
 %%% 自定义环境 %%%
