@@ -24,14 +24,26 @@
 %%% 颜色定义 %%%
 % 水
 \providecolor{水蓝}{HTML}{d2f0f4}
+
 % 蓝
+\providecolor{云山蓝}{HTML}{2f90b9}
+\providecolor{月白}{HTML}{eef7f2}
+
 \providecolor{靛蓝}{HTML}{065279}
 \providecolor{靛青}{HTML}{177cb0}
+
 % 红
+\providecolor{藏花红}{HTML}{ec2d7a}
+\providecolor{海棠红}{HTML}{f03752}
 \providecolor{桃红}{HTML}{f47983}
 \providecolor{品红}{HTML}{f00056}
 \providecolor{丹}{HTML}{ff4e20}
+\providecolor{芙蓉红}{HTML}{f9723d}
+\providecolor{莓酱红}{HTML}{fa5d19}
+
 % 绿
+\providecolor{粉绿}{HTML}{83cbac}
+\providecolor{美蝶绿}{HTML}{12aa9c}
 \providecolor{绿沈}{HTML}{0c8918}
 \providecolor{青碧}{HTML}{48c0a3}
 \providecolor{缥}{HTML}{7fecad}
@@ -54,20 +66,38 @@
 \providecolor{花白}{HTML}{c2ccd0}
 \providecolor{灰白}{HTML}{f0f0f4}
 
+% 紫
+\providecolor{青蛤壳紫}{HTML}{bc84a8}
+\providecolor{豆蔻紫}{HTML}{ad6598}
+
+%% 字体颜色 %%
+\colorlet{正文字色}{漆黑}
+\colorlet{主色}{云山蓝}
+\colorlet{次主色}{月白}
+\colorlet{乙色}{粉绿}
+\colorlet{重乙色}{美蝶绿}
+\colorlet{丙色}{芙蓉红}
+\colorlet{重丙色}{莓酱红}
+\colorlet{丁色}{青蛤壳紫}
+\colorlet{重丁色}{豆蔻紫}
+
+\colorlet{亮色}{藏花红}
+\colorlet{次亮色}{海棠红}
+
 %%% CTEX格式设置 %%%
 \ctexset{
   today=big,
   contentsname={文章导航},
-  section/format=\Large\bfseries\centering\color{靛蓝},
-  subsection/number={\textcolor{靛蓝}{\thesubsection}},
+  section/format=\Large\bfseries\centering\color{主色},
+  subsection/number={\textcolor{主色}{\thesubsection}},
 }
 
 %%% 链接设置 %%%
 \hypersetup{
   colorlinks=true,
-  linkcolor=品红,
-  urlcolor=靛青,
-  filecolor=青碧,
+  linkcolor=亮色,
+  % urlcolor=靛青,
+  % filecolor=青碧,
 }
 
 %%% 代码高亮设置 %%%
@@ -137,11 +167,11 @@
 
 %%% 页眉页脚设置 %%%
 \pagestyle{fancy}
-\fancyhead[L]{\textcolor{靛蓝}{\leftmark}}
-\fancyhead[C]{\textcolor{靛蓝}{第\zhnumber{\thepage}页}}
-\fancyhead[R]{\textcolor{靛蓝}{\rightmark}}
+\fancyhead[L]{\textcolor{主色}{\leftmark}}
+\fancyhead[C]{\textcolor{主色}{第\zhnumber{\thepage}页}}
+\fancyhead[R]{\textcolor{主色}{\rightmark}}
 \fancyfoot{}
-\renewcommand{\headrule}{\color{靛蓝}\hrule width\textwidth}
+\renewcommand{\headrule}{\color{主色}\hrule width\textwidth}
 
 %%% tcolorbox %%%
 \tcbuselibrary{theorems}
@@ -161,7 +191,7 @@
 
 % 内联代码，单一颜色
 \providecommand\代码[1]{%
-  {\ttfamily{\textcolor{桃红}{#1}}}%
+  {\ttfamily{\textcolor{次亮色}{#1}}}%
 }
 
 %%% 自定义环境 %%%
@@ -172,7 +202,7 @@
 
 \tcolorboxenvironment{引用}{
   blanker,
-  borderline west={1mm}{0pt}{花白}
+  borderline west={1mm}{0pt}{丁色}
 }
 
 % 定理
@@ -212,11 +242,11 @@
 \newtcbtheorem[number within=section]{定义}{定义}{
   fonttitle=\heiti,
   boxrule=0.1mm,
-  colback=雪白,
+  colback=次主色,
   before upper={\parindent2em},
-  colframe=靛青,
+  colframe=主色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=靛青}
+  boxed title style={colback=主色}
 }{定义}
 
 % 文本提示框
@@ -233,21 +263,21 @@
 
 % 提示
 \newenvironment{提示}
-{\begin{文本提示框}{靛蓝}
-    \textcolor{靛蓝}{\heiti{提示：}}
+{\begin{文本提示框}{主色}
+    \textcolor{主色}{\heiti{提示：}}
 }
 {\end{文本提示框}}
 
 % 提醒
 \newenvironment{提醒}
-{\begin{文本提示框}{橙色}
-    \textcolor{橙色}{\heiti{提醒：}}
+{\begin{文本提示框}{乙色}
+    \textcolor{乙色}{\heiti{提醒：}}
 }
 {\end{文本提示框}}
 
 % 注意
 \newenvironment{注意}
-{\begin{文本提示框}{丹}
-    \textcolor{丹}{\heiti{注意：}}
+{\begin{文本提示框}{丙色}
+    \textcolor{丙色}{\heiti{注意：}}
 }
 {\end{文本提示框}}
