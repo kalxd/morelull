@@ -9,7 +9,8 @@
 % 眉首眉脚
 \RequirePackage{fancyhdr}
 % 颜色支持
-\RequirePackage[table, dvipsnames]{xcolor}
+\RequirePackage[table]{xcolor}
+\RequirePackage{xcolor-material}
 % 代码提示
 \RequirePackage{listings}
 % 版边边距
@@ -21,68 +22,21 @@
 % 链接
 \RequirePackage{hyperref}
 
-%%% 颜色定义 %%%
-% 水
-\providecolor{水蓝}{HTML}{d2f0f4}
-
-% 蓝
-\providecolor{云山蓝}{HTML}{2f90b9}
-\providecolor{月白}{HTML}{eef7f2}
-
-\providecolor{靛蓝}{HTML}{065279}
-\providecolor{靛青}{HTML}{177cb0}
-
-% 红
-\providecolor{藏花红}{HTML}{ec2d7a}
-\providecolor{海棠红}{HTML}{f03752}
-\providecolor{桃红}{HTML}{f47983}
-\providecolor{品红}{HTML}{f00056}
-\providecolor{丹}{HTML}{ff4e20}
-\providecolor{芙蓉红}{HTML}{f9723d}
-\providecolor{莓酱红}{HTML}{fa5d19}
-
-% 绿
-\providecolor{粉绿}{HTML}{83cbac}
-\providecolor{美蝶绿}{HTML}{12aa9c}
-\providecolor{绿沈}{HTML}{0c8918}
-\providecolor{青碧}{HTML}{48c0a3}
-\providecolor{缥}{HTML}{7fecad}
-\providecolor{艾绿}{HTML}{a4e2c6}
-\providecolor{嫩绿}{HTML}{bddd22}
-\providecolor{青白}{HTML}{c0ebd7}
-% 黄
-\providecolor{姜黄}{HTML}{ffc773}
-\providecolor{橙色}{HTML}{fa8c35}
-% 灰
-\providecolor{苍白}{HTML}{d1d9e0}
-\providecolor{苍青}{HTML}{7397ab}
-% 黑
-\providecolor{漆黑}{HTML}{161823}
-\providecolor{墨色}{HTML}{50616d}
-% 白
-\providecolor{莹白}{HTML}{e3f9fd}
-\providecolor{雪白}{HTML}{f2fdff}
-\providecolor{月白}{HTML}{d6ecf0}
-\providecolor{花白}{HTML}{c2ccd0}
-\providecolor{灰白}{HTML}{f0f0f4}
-
-% 紫
-\providecolor{青蛤壳紫}{HTML}{bc84a8}
-\providecolor{豆蔻紫}{HTML}{ad6598}
-
 %% 字体颜色 %%
-\colorlet{正文字色}{漆黑}
-\colorlet{主色}{云山蓝}
-\colorlet{次主色}{月白}
-\colorlet{乙色}{粉绿}
-\colorlet{重乙色}{美蝶绿}
-\colorlet{丙色}{芙蓉红}
-\colorlet{重丙色}{莓酱红}
-\colorlet{丁色}{青蛤壳紫}
-\colorlet{重丁色}{豆蔻紫}
+\colorlet{正文字色}{MaterialGrey900}
+\colorlet{主色}{MaterialBlue900}
+\colorlet{次主色}{MaterialBlue700}
+\colorlet{乙色}{MaterialGreen}
+\colorlet{次乙色}{MaterialGreen50}
+\colorlet{丙色}{MaterialTeal}
+\colorlet{次丙色}{MaterialTeal50}
+\colorlet{丁色}{MaterialBlueGrey}
+\colorlet{次丁色}{MaterialBlueGrey50}
+\colorlet{戊色}{MaterialCyan}
+\colorlet{次戊色}{MaterialCyan50}
 
-\colorlet{亮色}{藏花红}
-\colorlet{次亮色}{海棠红}
+\colorlet{亮色}{MaterialPink}
+\colorlet{次亮色}{MaterialPink200}
 
 %%% CTEX格式设置 %%%
 \ctexset{
@@ -114,22 +68,22 @@
   upquote=true,
   captionpos=b,
   basicstyle=\footnotesize,
-  backgroundcolor=\color{雪白},
-  rulecolor=\color{水蓝},
-  identifierstyle=\color{漆黑},
-  commentstyle=\itshape\color{墨色},
-  stringstyle=\bfseries\color{青碧},
+  backgroundcolor=\color{MaterialBlue50},
+  rulecolor=\color{MaterialBlue},
+  identifierstyle=\color{MaterialBlue800},
+  commentstyle=\itshape\color{MaterialGreen700},
+  stringstyle=\bfseries\color{MaterialAmber800},
   % 保留关键字
-  keywordstyle=[1]\bfseries\color{靛蓝},
+  keywordstyle=[1]\bfseries\color{MaterialPurple700},
   % 新类、新类型、新接口定义
-  keywordstyle=[2]\bfseries\color{绿沈},
+  keywordstyle=[2]\bfseries\color{MaterialTeal800},
   % 原始类型
-  keywordstyle=[3]\bfseries\color{品红},
+  keywordstyle=[3]\bfseries\color{MaterialPink400},
   % 模块
-  keywordstyle=[4]\bfseries\color{靛蓝},
+  keywordstyle=[4]\bfseries\color{MaterialBlue900},
   % 其他
-  keywordstyle=[5]\color{桃红},
-  numberstyle=\bfseries\color{漆黑},
+  keywordstyle=[5]\color{MaterialRed500},
+  numberstyle=\bfseries\color{MaterialGrey800},
 }
 
 % typescript语法定义
@@ -210,10 +164,10 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=青白,
-  colframe=青碧,
+  colback=次乙色,
+  colframe=乙色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=青碧}
+  boxed title style={colback=乙色}
 }{定理}
 
 % 结论
@@ -221,10 +175,10 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=姜黄,
-  colframe=橙色,
+  colback=次丙色,
+  colframe=丙色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=橙色}
+  boxed title style={colback=丙色}
 }{结论}
 
 % 命题
@@ -232,21 +186,21 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=灰白,
-  colframe=苍青,
+  colback=次丁色,
+  colframe=丁色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=苍青}
+  boxed title style={colback=丁色}
 }{命题}
 
 % 定义
 \newtcbtheorem[number within=section]{定义}{定义}{
   fonttitle=\heiti,
   boxrule=0.1mm,
-  colback=次主色,
+  colback=次戊色,
   before upper={\parindent2em},
-  colframe=主色,
+  colframe=戊色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=主色}
+  boxed title style={colback=戊色}
 }{定义}
 
 % 文本提示框
