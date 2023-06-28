@@ -10,7 +10,6 @@
 \RequirePackage{fancyhdr}
 % 颜色支持
 \RequirePackage[table]{xcolor}
-\RequirePackage{xcolor-material}
 % 代码提示
 \RequirePackage{listings}
 % 版边边距
@@ -23,20 +22,44 @@
 \RequirePackage{hyperref}
 
 %% 字体颜色 %%
-\colorlet{正文字色}{MaterialGrey900}
-\colorlet{主色}{MaterialBlue900}
-\colorlet{次主色}{MaterialBlue700}
-\colorlet{乙色}{MaterialGreen}
-\colorlet{次乙色}{MaterialGreen50}
-\colorlet{丙色}{MaterialTeal}
-\colorlet{次丙色}{MaterialTeal50}
-\colorlet{丁色}{MaterialBlueGrey}
-\colorlet{次丁色}{MaterialBlueGrey50}
-\colorlet{戊色}{MaterialCyan}
-\colorlet{次戊色}{MaterialCyan50}
+\providecolor{牛角灰}{HTML}{2d2e36}
+\providecolor{虹蓝}{HTML}{2177b8}
+\providecolor{品红}{HTML}{ef3473}
+\providecolor{瀑布蓝}{HTML}{51c4d3}
+\providecolor{麦苗绿}{HTML}{55bb8a}
+\providecolor{嫩菊绿}{HTML}{f0f5e5}
+\providecolor{金驼}{HTML}{e46828}
+\providecolor{狼烟灰}{HTML}{5d655f}
+\providecolor{胆矾蓝}{HTML}{0f95b0}
+\providecolor{海天蓝}{HTML}{c6e6e8}
+\providecolor{珍珠灰}{HTML}{e4dfd7}
+\providecolor{橄榄黄绿}{HTML}{bec936}
+\providecolor{海沬绿}{HTML}{e2e7bf}
 
-\colorlet{亮色}{MaterialPink}
-\colorlet{次亮色}{MaterialPink200}
+% 代码高亮
+\providecolor{魏紫}{HTML}{7e1671}
+\providecolor{青莲}{HTML}{8b2671}
+\providecolor{海王绿}{HTML}{248067}
+\providecolor{玉鈫蓝}{HTML}{126e82}
+
+\colorlet{正文字色}{牛角灰}
+\colorlet{主色}{虹蓝}
+
+\colorlet{提示色}{虹蓝}
+\colorlet{提醒色}{麦苗绿}
+\colorlet{注意色}{金驼}
+\colorlet{引用色}{狼烟灰}
+
+\colorlet{定理色}{麦苗绿}
+\colorlet{定理布色}{嫩菊绿}
+\colorlet{结论色}{胆矾蓝}
+\colorlet{结论布色}{海天蓝}
+\colorlet{命题色}{狼烟灰}
+\colorlet{命题布色}{珍珠灰}
+\colorlet{定义色}{橄榄黄绿}
+\colorlet{定义布色}{海沬绿}
+
+
 
 %%% CTEX格式设置 %%%
 \ctexset{
@@ -49,7 +72,7 @@
 %%% 链接设置 %%%
 \hypersetup{
   colorlinks=true,
-  linkcolor=亮色,
+  linkcolor=品红,
   % urlcolor=靛青,
   % filecolor=青碧,
 }
@@ -59,36 +82,36 @@
 
 \lstset{
   frame=shadowbox,
-  frameround=tttt,
   framesep=1pt,
   framextopmargin=6pt,
   framexbottommargin=6pt,
+  framexleftmargin=6pt,
   tabsize=4,
   breaklines=true,
   upquote=true,
   captionpos=b,
   basicstyle=\footnotesize,
-  backgroundcolor=\color{MaterialBlue50},
-  rulecolor=\color{MaterialBlue},
-  identifierstyle=\color{MaterialBlue800},
-  commentstyle=\itshape\color{MaterialGreen700},
-  stringstyle=\bfseries\color{MaterialAmber800},
+  rulecolor=\color{主色},
+  rulesepcolor=\color{主色},
+  identifierstyle=\color{主色},
+  commentstyle=\itshape\color{狼烟灰},
+  stringstyle=\bfseries\color{魏紫},
   % 保留关键字
-  keywordstyle=[1]\bfseries\color{MaterialPurple700},
+  keywordstyle=[1]\bfseries\color{品红},
   % 新类、新类型、新接口定义
-  keywordstyle=[2]\bfseries\color{MaterialTeal800},
+  keywordstyle=[2]\bfseries\color{青莲},
   % 原始类型
-  keywordstyle=[3]\bfseries\color{MaterialPink400},
+  keywordstyle=[3]\bfseries\color{海王绿},
   % 模块
-  keywordstyle=[4]\bfseries\color{MaterialBlue900},
+  keywordstyle=[4]\bfseries\color{玉鈫蓝},
   % 其他
-  keywordstyle=[5]\color{MaterialRed500},
-  numberstyle=\bfseries\color{MaterialGrey800},
+  keywordstyle=[5]\color{主色},
+  numberstyle=\bfseries\color{主色},
 }
 
 % typescript语法定义
 \lstdefinelanguage{typescript}{
-  morekeywords=[1]{const, let, function, if, else, while, do, return, break, async, await, yield},
+  morekeywords=[1]{const, let, function, if, else, while, do, return, break, async, await, yield, static, get, set},
   morekeywords=[2]{class, interface, extends, type, this, new},
   morekeywords=[3]{Array, Object, Number, NaN, null, undefined, Set, Buffer, string, number, object},
   morekeywords=[4]{module, exports, require, export import, from},
@@ -145,7 +168,7 @@
 
 % 内联代码，单一颜色
 \providecommand\代码[1]{%
-  {\ttfamily{\textcolor{次亮色}{#1}}}%
+  {\ttfamily{\textcolor{瀑布蓝}{#1}}}%
 }
 
 %%% 自定义环境 %%%
@@ -156,7 +179,7 @@
 
 \tcolorboxenvironment{引用}{
   blanker,
-  borderline west={1mm}{0pt}{丁色}
+  borderline west={1mm}{0pt}{引用色}
 }
 
 % 定理
@@ -164,10 +187,10 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=次乙色,
-  colframe=乙色,
+  colback=定理布色,
+  colframe=定理色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=乙色}
+  boxed title style={colback=定理色}
 }{定理}
 
 % 结论
@@ -175,10 +198,10 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=次丙色,
-  colframe=丙色,
+  colback=结论布色,
+  colframe=结论色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=丙色}
+  boxed title style={colback=结论色}
 }{结论}
 
 % 命题
@@ -186,21 +209,21 @@
   fonttitle=\heiti,
   boxrule=0.1mm,
   before upper={\parindent2em},
-  colback=次丁色,
-  colframe=丁色,
+  colback=命题布色,
+  colframe=命题色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=丁色}
+  boxed title style={colback=命题色}
 }{命题}
 
 % 定义
 \newtcbtheorem[number within=section]{定义}{定义}{
   fonttitle=\heiti,
   boxrule=0.1mm,
-  colback=次戊色,
+  colback=定义布色,
   before upper={\parindent2em},
-  colframe=戊色,
+  colframe=定义色,
   attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-  boxed title style={colback=戊色}
+  boxed title style={colback=定义色}
 }{定义}
 
 % 文本提示框
@@ -217,21 +240,21 @@
 
 % 提示
 \newenvironment{提示}
-{\begin{文本提示框}{主色}
-    \textcolor{主色}{\heiti{提示：}}
+{\begin{文本提示框}{提示色}
+    \textcolor{提示色}{\heiti{提示：}}
 }
 {\end{文本提示框}}
 
 % 提醒
 \newenvironment{提醒}
-{\begin{文本提示框}{乙色}
-    \textcolor{乙色}{\heiti{提醒：}}
+{\begin{文本提示框}{提醒色}
+    \textcolor{提醒色}{\heiti{提醒：}}
 }
 {\end{文本提示框}}
 
 % 注意
 \newenvironment{注意}
-{\begin{文本提示框}{丙色}
-    \textcolor{丙色}{\heiti{注意：}}
+{\begin{文本提示框}{注意色}
+    \textcolor{注意色}{\heiti{注意：}}
 }
 {\end{文本提示框}}
