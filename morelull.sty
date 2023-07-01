@@ -2,7 +2,7 @@
 % 个人自用文档样式
 %
 
-\ProvidesPackage{morelull}[2023/06/18 v0.4.0]
+\ProvidesPackage{morelull}[2023/07/01 v0.4.0]
 
 % 中文标点符号
 \RequirePackage{xeCJKfntef}
@@ -141,6 +141,19 @@
   morestring=[bd]",
 }
 \lstalias{rs}{rust}
+
+% racket语法定义
+\lstdefinelanguage{racket}{
+  morekeywords=[1]{define, values, define-values let, match-define, if, when, unless, ->, ->>, maybe/do, monad/do, >->, <-},
+  morekeywords=[1]{define/contract, define/curry/contract/, define/match1, define/match1/contract, define/curry, for/array, for/hashmap},
+  morekeywords=[2]{it, break},
+  morekeywords=[3]{Maybe, Just, Nothing, nothing, Array, Map, string},
+  morekeywords=[4]{require, provide, module},
+  morekeywords=[5]{>->},
+  morecomment=[l]{;},
+  morestring=[bd]{"},
+}
+\lstalias{rkt}{racket}
 
 %%% 页眉页脚设置 %%%
 \pagestyle{fancy}
