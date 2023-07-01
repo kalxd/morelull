@@ -2,9 +2,9 @@
 
 ![睡睡菇](https://media.52poke.com/wiki/thumb/c/c9/755Morelull.png/240px-755Morelull.png)
 
-面向民科（我自己）技术文档。
+面向民科（我自己）技术文档。专注于中文排版。
 
-关注于中文排版。
+不善于色彩设计，只堪入目耳。
 
 # 简介
 
