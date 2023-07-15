@@ -14,6 +14,8 @@
 \setCJKsansfont{方正聚珍新仿简繁}
 \setCJKfamilyfont{zhhei}{方正黑体简体}
 
+\lstset{basicstyle=\footnotesize\ttfamily}
+
 % 重新定义
 \renewenvironment{引用}
 {\begin{quote}\CJKfamily{方正楷体}\small}
