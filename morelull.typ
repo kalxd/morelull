@@ -11,11 +11,16 @@
   霁青: rgb(99, 187, 208)
 )
 
+#let 字体 = (
+  中文: "FZJuZhenXinFang-R-JF",
+  英文: "Fantasque Sans Mono"
+)
+
 #let t = h(2em)
 
 #let morelull(
   标题: "标题",
-  作者: "荀涧林",
+  作者: "荀洪道",
   doc
 ) = {
   let 设定标题(标题) = {
@@ -66,8 +71,7 @@
     margin: 4em,
     header: locate(设定眉头)
   )
-  // set text(font: "FZPingXianYaSong-R-GBK", fallback: true, lang: "zh")
-  set text(font: "FZJuZhenXinFang-R-JF", fallback: true, lang: "zh")
+  set text(font: 字体.中文, fallback: true, lang: "zh")
 
   // 封面
   align(center + horizon)[
@@ -88,13 +92,13 @@
       stroke: 颜色.靛青,
       inset: 1em,
       width: 100%,
-    )[#text(font: "Fantasque Sans Mono", it)]
+    )[#text(font: 字体.英文, it)]
   }
 
   // 内联代码
   show raw.where(block: false): it => {
     text(
-      font: "Fantasque Sans Mono",
+      font: 字体.英文,
       fill: 颜色.靛青,
       it
     )

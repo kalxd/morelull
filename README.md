@@ -8,7 +8,10 @@
 
 # 简介
 
-*morelull*重新定义`ctexart`默认样式，同时拓展一些命令。
+*morelull*原本为LaTeX模板，现切换成了Typst模板。
+
+*morelull*在原有基础，设定了新字体、重写部分默认样式。
+一些typst无法解决的问题，该模板也同样存在：默认开头空两格……
 
 整体主题色彩依据[中国色彩](https://github.com/kalxd/happiny)。
 
@@ -16,68 +19,29 @@
 
 需要使用`xelatex`编译，同时依赖下面这些包：
 
-* fancyhdr，眉首眉脚。
-* xcolor，重新定义调色板。
-* listings，代码高亮
-* geometry，版边边距。
-* tcolorbox，醒目提示。
-* bookmark，书签功能。
-* hyperref，超链接。
+[a2c-nums](https://github.com/typst/packages/tree/main/packages/preview/a2c-nums/0.0.1) ：阿拉伯数字转为中文数字。
 
 # 安装
 
-这个包并未上传到ctan，只能本地安装。确保依赖包满足的情况下，执行以下命令：
+模板暂时无法通过网络安装，可手动安装到本地，见[typst包文档](https://github.com/typst/packages?tab=readme-ov-file#local-packages)。
 
-1. 在家目录创建必要目录：
+# 使用模板
 
-```bash
-$ mkdir -p ~/texmf/tex/latex/
+```typst
+#import "local/morelull:0.1.0": morelull, t
+#show: morelull(标题: "文章的标题", 作者: "文章的作得")
+
+= 第一段
+
+#t 开始你的表演……
 ```
 
-2. 复制源代码：
+*morelull*仅提供两个函数，一个是模板函数`morelull`，另一个是开头缩进`t`。
 
-```
-$ git clone https://github.com/kalxd/morelull.git ~/texmf/tex/latex/morelull
-```
-3. 重载包信息：
+# 说明
 
-```bash
-$ texhash ~/texmf
-```
+模板使用了方正字体，需要额外安装；字体不存在的情况下，编译无法通过。
 
-这几步下来，不出意外的话，应该就能使用上了。
+# 发布协议
 
-# 说明文档
-
-可查看兼具使用说明和代码说明的[文档源码](./doc/doc.tex)。
-
-或者在overleaf上[在线预览模板](https://www.overleaf.com/latex/templates/morelull-sample/sfrmdxnrnbbn)。
-
-# 使用
-
-```latex
-% 跟使用ctexart没区别。
-\documentclass{morelull}
-
-\begin{document}
-你好啊。
-
-\begin{lstlisting}{language=haskell}
-main :: IO ()
-main = getLine >>= putStrLn
-\end{lstlisting}
-\end{document}
-```
-
-使用`morelull`文档，默认使用了方正宋体，电脑上没有安装该字体，编译会失败。
-
-同样可以使用它的包。
-
-```latex
-\documentclass{ctexart}
-\usepackage{morelull}
-
-% ...
-```
-
-功能与文档用法大同小异，移除了一些默认配置，可以在其它电脑上安装使用。
+GPL v3
