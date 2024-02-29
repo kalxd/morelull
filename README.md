@@ -26,7 +26,7 @@
 # 使用模板
 
 ```typst
-#import "local/morelull:0.1.0": morelull, t
+#import "local/morelull:0.5.0": morelull, t
 #show: morelull.with(标题: "文章的标题", 作者: "文章的作得")
 
 = 第一段

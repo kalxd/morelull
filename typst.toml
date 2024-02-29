@@ -1,6 +1,6 @@
 [package]
 name = "morelull"
-version = "0.1.0"
+version = "0.5.0"
 entrypoint = "morelull.typ"
 authors = ["荀洪道"]
 license = ["GPL v3"]

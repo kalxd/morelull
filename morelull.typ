@@ -110,6 +110,9 @@
   // 链接
   show link: set text(fill: 颜色.品红)
 
+  // 表格居中
+  show table: it => align(center, it)
+
   pagebreak()
   doc
 }
