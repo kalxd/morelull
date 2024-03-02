@@ -13,7 +13,7 @@
 
 #let 字体 = (
   中文: "FZJuZhenXinFang-R-JF",
-  英文: "Fantasque Sans Mono"
+  英文: "FiraCode Nerd Font Mono"
 )
 
 #let t = h(2em)
@@ -92,7 +92,8 @@
       stroke: 颜色.靛青,
       inset: 1em,
       width: 100%,
-    )[#text(font: 字体.英文, it)]
+      text(font: (字体.英文, 字体.中文), it)
+    )
   }
 
   // 内联代码
