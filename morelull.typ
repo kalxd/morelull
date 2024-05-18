@@ -65,7 +65,7 @@
     line(length: 100%, stroke: 颜色.靛青)
   }
 
-  
+  // 整体版面  
   set page(
     paper: "a4",
     margin: 4em,
@@ -105,8 +105,12 @@
     )
   }
 
-  // 着重号
+  // 专名号
   set underline(offset: 4pt)
+
+  // 行高
+  set par(leading: 1em)
+  show par: set block(below: 1em)
 
   // 链接
   show link: set text(fill: 颜色.品红)
