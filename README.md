@@ -17,6 +17,8 @@
 
 # 依赖
 
+typst最低要求为_0.12.0_。
+
 [a2c-nums](https://github.com/typst/packages/tree/main/packages/preview/a2c-nums/0.0.1) ：阿拉伯数字转为中文数字。
 
 # 安装
@@ -26,7 +28,7 @@
 # 使用模板
 
 ```typst
-#import "local/morelull:0.5.0": morelull, t
+#import "local/morelull:0.6.0": morelull, t
 #show: morelull.with(标题: "文章的标题", 作者: "文章的作得")
 
 = 第一段
