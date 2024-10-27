@@ -41,30 +41,6 @@
     year + "年" + month + "月" + day + "日"
   }
 
-  let 设定眉头(loc) = {
-    set text(颜色.靛青)
-    let current-page = loc.page();
-    if current-page == 1 {
-      return none
-    }
-
-    current-page = current-page - 1;    
-    let current-page = int-to-cn-simple-num(current-page)
-    let title-page = "第" + current-page + "页"
-
-    let last-header = query(heading.where(level: 1), loc)
-      .rev()
-      .find(h => h.location().page() <= loc.page());
-
-    let header-title = if not last-header == none {
-      last-header.body
-    }
-
-    header-title + h(1fr) + title-page
-    v(-.4em)
-    line(length: 100%, stroke: 颜色.靛青)
-  }
-
   // 整体版面  
   set page(
     paper: "a4",
