@@ -1,4 +1,4 @@
-#import "@local/morelull:0.5.0": *
+#import "@local/morelull:0.6.0": *
 
 #show: morelull.with(标题: "这里写上一个标题")
 
@@ -18,3 +18,18 @@ fn main() {
 ```
 
 #t 这里再启动一个新的东西。
+
+#context [
+
+#let cur-header = query(selector(heading.where(level: 1)).before(here()))
+#cur-header
+]
+= title here
+
+sfasf
+
+#pagebreak()
+
+
+
+title

@@ -25,7 +25,7 @@
 ) = {
   let 设定标题(标题) = {
     text(size: 2.6em)[
-      #sym.notes.down #标题 #sym.notes.up
+      #sym.note.up #标题 #sym.note.down
     ]
   }
 
@@ -69,7 +69,33 @@
   set page(
     paper: "a4",
     margin: 4em,
-    header: locate(设定眉头)
+    header: context [
+    	#let cur-pos = here().position()
+    	#let cur-page = cur-pos.page
+    	
+    	#if cur-page <= 1 {
+    		return none
+    	}
+    	
+    	#set text(颜色.靛青)
+    	#let prev-header = query(selector(heading.where(level: 1)).before(here()))
+    	
+    	#let next-header = if prev-header.len() == 0 {
+    		query(selector(heading.where(level: 1)).after(here(), inclusive: false))
+    	}
+    		
+    	#let header-title = if not prev-header.len() == 0 {
+    		prev-header.rev().first().body
+    	} else if not next-header.len() == 0 {
+    		next-header.first().body
+    	}
+    	
+    	#header-title
+    	#h(1fr)
+    	第#int-to-cn-simple-num(cur-page)页
+    	#v(-.4em)
+    	#line(length: 100%, stroke: 颜色.靛青)
+    ]
   )
   set text(font: 字体.中文, fallback: true, lang: "zh")
 
@@ -110,7 +136,6 @@
 
   // 行高
   set par(leading: 1em)
-  show par: set block(below: 1em)
 
   // 链接
   show link: set text(fill: 颜色.品红)
