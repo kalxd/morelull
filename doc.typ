@@ -1,4 +1,4 @@
-#import "@local/morelull:0.6.0": *
+#import "@local/morelull:0.6.1": *
 
 #show: morelull.with(标题: "这里写上一个标题")
 

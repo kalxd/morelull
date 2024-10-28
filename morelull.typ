@@ -45,33 +45,35 @@
   set page(
     paper: "a4",
     margin: 4em,
-    header: context [
-    	#let cur-pos = here().position()
-    	#let cur-page = cur-pos.page
+    header: context {
+    	let cur-pos = here().position()
+    	let cur-page = cur-pos.page
     	
-    	#if cur-page <= 1 {
+    	if cur-page <= 1 {
     		return none
     	}
     	
-    	#set text(颜色.靛青)
-    	#let prev-header = query(selector(heading.where(level: 1)).before(here()))
-    	
-    	#let next-header = if prev-header.len() == 0 {
-    		query(selector(heading.where(level: 1)).after(here(), inclusive: false))
-    	}
+    	set text(颜色.靛青)
+    	let head-el = query(selector(heading.where(level: 1)))
+    		.rev()
+    		.find(h => h.location().page() <= cur-page)
     		
-    	#let header-title = if not prev-header.len() == 0 {
-    		prev-header.rev().first().body
-    	} else if not next-header.len() == 0 {
-    		next-header.first().body
+    	let all-header-list = query(selector(heading.where(level: 1)))
+    	let cur-page-header-list = all-header-list.filter(h => h.location().page() == cur-page)
+    	let prev-page-header = all-header-list.rev().find(h => h.location().page() < cur-page)
+
+    	let header-title = if cur-page-header-list.len() != 0 {
+    		cur-page-header-list.first().body
+    	} else if prev-page-header != none {
+    		prev-page-header.body
     	}
-    	
-    	#header-title
-    	#h(1fr)
-    	第#int-to-cn-simple-num(cur-page)页
-    	#v(-.4em)
-    	#line(length: 100%, stroke: 颜色.靛青)
-    ]
+
+    	[#header-title]
+    	h(1fr)
+    	[第#int-to-cn-simple-num(cur-page - 1)页]
+    	v(-.4em)
+    	line(length: 100%, stroke: 颜色.靛青)
+    }
   )
   set text(font: 字体.中文, fallback: true, lang: "zh")
 

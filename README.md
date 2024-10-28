@@ -28,7 +28,7 @@ typst最低要求为 __0.12.0__。
 # 使用模板
 
 ```typst
-#import "local/morelull:0.6.0": morelull, t
+#import "local/morelull:0.6.1": morelull, t
 #show: morelull.with(标题: "文章的标题", 作者: "文章的作者")
 
 = 第一段
